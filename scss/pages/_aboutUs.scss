@@ -1,0 +1,67 @@
+@use "../utilities/typography";
+@use "../utilities/variables";
+@use "../components/btn";
+
+.aboutUs {
+  background-color: variables.$light-bg;
+
+  &__left {
+    padding-top: variables.$sm;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__right {
+    padding-left: variables.$xsm;
+    h3 {
+      font-family: typography.$satisfy;
+      font-size: variables.$l;
+      color: variables.$green;
+    }
+    h2 {
+      font-family: typography.$poppins;
+      font-size: variables.$l;
+      color: variables.$black;
+      font-weight: 600;
+      margin: variables.$sm 0;
+    }
+    &--description {
+      color: variables.$light-color;
+      line-height: 1.75;
+      font-family: typography.$poppins;
+      font-size: variables.$xsm;
+      margin-bottom: variables.$sm;
+    }
+  }
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: variables.$xsm;
+    margin-top: variables.$l;
+    width: 95vw;
+
+    &--col {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: variables.$xsm;
+
+      p {
+        font-family: typography.$nunito;
+        font-size: variables.$sm;
+        padding-left: variables.$xxsm;
+      }
+    }
+  }
+}
+@media screen and (min-width: 45rem) {
+  .aboutUs {
+    display: flex;
+    align-items: center;
+
+    &__left {
+      flex: 1;
+    }
+  }
+}

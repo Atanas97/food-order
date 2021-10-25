@@ -1,0 +1,85 @@
+@use "../utilities/typography";
+@use "../utilities/variables";
+@use "../components/btn";
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__img {
+    margin-top: 2rem;
+
+    &--background {
+      display: block;
+      width: 90%;
+      margin: 2rem auto auto;
+    }
+    &--position {
+      position: absolute;
+      top: 0%;
+      right: 0;
+      width: 120%;
+    }
+  }
+
+  &__info {
+    width: 95vw;
+    margin: variables.$sm auto;
+
+    h3 {
+      color: variables.$green;
+      font-family: typography.$poppins;
+      font-weight: 400;
+      font-size: variables.$xsm;
+    }
+    h2 {
+      color: variables.$black;
+      text-transform: capitalize;
+      font-size: variables.$l;
+      font-family: typography.$poppins;
+      font-weight: 600;
+      line-height: 1.25;
+      margin: 1rem 0;
+      //   max-width: 0%;
+    }
+    p {
+      color: variables.$light-color;
+      line-height: 1.75;
+      font-family: typography.$poppins;
+      font-size: variables.$xsm;
+      margin-bottom: variables.$sm;
+    }
+  }
+}
+@media screen and (min-width: 45rem) {
+  .showcase {
+    flex-direction: row-reverse;
+    align-items: center;
+    overflow: hidden;
+    &__img {
+      width: 100%;
+
+      &--position {
+        width: 90%;
+        top: -25%;
+        right: -10%;
+      }
+    }
+
+    &__info {
+      padding-left: variables.$l;
+
+      h3 {
+        font-size: variables.$sm;
+      }
+      h2 {
+        font-size: 1.9rem;
+        line-height: 1.5;
+      }
+      p {
+        font-size: variables.$xsm;
+        max-width: 90%;
+      }
+    }
+  }
+}

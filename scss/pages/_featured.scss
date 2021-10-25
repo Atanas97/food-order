@@ -1,0 +1,33 @@
+@use "../utilities/typography";
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: variables.$xsm;
+  width: 95vw;
+  margin: variables.$xl auto;
+  &__item {
+    display: grid;
+    place-items: center;
+    color: variables.$black;
+    background-color: variables.$light-bg;
+    border-radius: 0.5rem;
+    padding: variables.$sm;
+    @include mixins.hoverForGreen();
+    img {
+      display: block;
+      max-width: 60%;
+    }
+    h4 {
+      text-transform: capitalize;
+      font-family: typography.$poppins;
+    }
+  }
+}
+@media screen and (min-width: 45rem) {
+  .featured__item img {
+    max-width: 100%;
+  }
+}

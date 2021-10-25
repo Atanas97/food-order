@@ -1,0 +1,120 @@
+@use "../utilities/typography";
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.header {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: variables.$box-shadow;
+  padding: 1rem;
+  border-bottom: 1px solid variables.$light-bg;
+
+  &__logo {
+    i {
+      color: variables.$green;
+      font-size: variables.$l;
+      padding-right: variables.$xxsm;
+    }
+    h1 {
+      color: variables.$black;
+      font-size: variables.$l;
+      font-family: typography.$poppins;
+      font-weight: 600;
+    }
+  }
+
+  &__navigation-toggle {
+    color: variables.$black;
+    background-color: variables.$light-bg;
+    height: 2rem;
+    width: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.25rem;
+    transition: variables.$transition;
+    margin-inline: auto variables.$xxsm;
+    border: none;
+    font-size: variables.$xsm;
+
+    @include mixins.hoverForGreen();
+  }
+
+  &__nav-menu {
+    position: absolute;
+    z-index: 1010;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: variables.$transition;
+    border: 1px solid variables.$light-bg;
+    background-color: #fff;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$xxsm;
+      padding: variables.$xsm 0 variables.$xsm variables.$xsm;
+      a {
+        color: variables.$light-color;
+        font-family: typography.$nunito;
+        font-size: variables.$sm;
+        transition: variables.$transition;
+        display: block;
+
+        &:hover {
+          color: variables.$green;
+        }
+      }
+    }
+  }
+  &__nav-menu.active {
+    box-shadow: variables.$box-shadow;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  &__icons {
+    gap: variables.$xxsm;
+    i {
+      color: variables.$black;
+      background-color: variables.$light-bg;
+      height: 2rem;
+      width: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: 0.25rem;
+
+      @include mixins.hoverForGreen();
+    }
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  .header {
+    justify-content: space-around;
+    &__navigation-toggle {
+      display: none;
+    }
+    &__nav-menu {
+      all: unset;
+      ul {
+        flex-direction: row;
+        gap: variables.$sm;
+
+        a {
+          font-size: variables.$sm;
+        }
+      }
+    }
+
+    &__icons {
+      i {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: variables.$sm;
+      }
+    }
+  }
+}

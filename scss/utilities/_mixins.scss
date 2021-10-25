@@ -1,0 +1,11 @@
+//Hover green background
+@use "../utilities/variables";
+@mixin hoverForGreen() {
+  transition: variables.$transition;
+
+  &:hover {
+    background-color: variables.$green;
+    color: #fff;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,14 @@
+@use "../utilities/variables";
+@use "../utilities/typography";
+
+.btn {
+  display: inline-block;
+  padding: variables.$xxsm variables.$xsm;
+  background-color: variables.$green;
+  color: #fff;
+
+  border-radius: 0.5rem;
+
+  font-family: typography.$poppins;
+  text-transform: capitalize;
+}

@@ -1,0 +1,39 @@
+//colors
+$green: #27ae60;
+$black: #130f40;
+$white: #fff;
+$light-color: #666;
+$light-bg: #f7f7f7;
+$border: 0.1rem solid rgba(0, 0, 0, 0.2);
+$box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+
+//sizing
+$xxl: 3.052rem;
+$xl: 2.441rem;
+$l: 1.653rem;
+$sm: 1.15rem;
+$xsm: 0.75rem;
+$xxsm: 0.512rem;
+
+//transition
+$transition: 250ms all ease-in-out;
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.spacing > * + * {
+  margin: 1rem 0;
+}
+
+.flex-al-c {
+  display: flex;
+  align-items: center;
+}
+
+// .jc-sb{
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
