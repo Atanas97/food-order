@@ -11,4 +11,10 @@
 
   font-family: typography.$poppins;
   text-transform: capitalize;
+
+  transition: variables.$transition;
+
+  &:hover {
+    background-color: variables.$black;
+  }
 }

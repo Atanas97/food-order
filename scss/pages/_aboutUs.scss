@@ -9,7 +9,7 @@
     padding-top: variables.$sm;
     img {
       display: block;
-      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -34,23 +34,27 @@
       font-size: variables.$xsm;
       margin-bottom: variables.$sm;
     }
-  }
-  &__services {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: variables.$xsm;
-    margin-top: variables.$l;
-    width: 95vw;
 
-    &--col {
-      background-color: #fff;
-      border-radius: 0.5rem;
-      padding: variables.$xsm;
+    &__services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: variables.$xsm;
+      margin-top: variables.$l;
+      // width: 95vw;
 
-      p {
-        font-family: typography.$nunito;
-        font-size: variables.$sm;
-        padding-left: variables.$xxsm;
+      &--col {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: variables.$xsm;
+        box-shadow: variables.$box-shadow;
+
+        p {
+          font-family: typography.$nunito;
+          font-size: variables.$sm;
+          color: variables.$black;
+          font-weight: 600;
+          padding-left: variables.$xxsm;
+        }
       }
     }
   }
@@ -61,7 +65,23 @@
     align-items: center;
 
     &__left {
-      flex: 1;
+      max-width: 50%;
+    }
+
+    &__right {
+      padding-left: 0;
+      width: 40vw;
+      margin-inline: auto;
+      h3 {
+        font-size: variables.$l;
+      }
+      h2 {
+        font-size: variables.$xl;
+      }
+      &--description {
+        font-size: variables.$sm;
+        max-width: 85%;
+      }
     }
   }
 }

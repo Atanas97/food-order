@@ -17,6 +17,10 @@ $xxsm: 0.512rem;
 
 //transition
 $transition: 250ms all ease-in-out;
+
+html {
+  scroll-behavior: smooth;
+}
 li {
   list-style-type: none;
 }

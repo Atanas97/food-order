@@ -1,0 +1,42 @@
+@use "../utilities/typography";
+@use "../utilities/variables";
+@use "../components/btn";
+
+.popular {
+  text-align: center;
+
+  &__container {
+    display: grid;
+    place-items: center;
+    gap: variables.$sm;
+
+    &--item {
+      display: grid;
+      place-items: center;
+      gap: variables.$xsm;
+      background: variables.$light-bg;
+      padding: variables.$sm;
+      border-radius: 0.5rem;
+
+      img {
+        display: block;
+        max-width: 70%;
+      }
+
+      h4 {
+        font-family: typography.$poppins;
+        font-size: variables.$sm;
+        font-weight: 600;
+        color: variables.$black;
+        text-transform: capitalize;
+      }
+      i {
+        color: gold;
+      }
+      &--total {
+        color: variables.$light-color;
+        font-family: typography.$nunito;
+      }
+    }
+  }
+}
