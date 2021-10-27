@@ -1,13 +1,31 @@
 @use "../utilities/typography";
 @use "../utilities/variables";
+@use "../utilities/mixins";
 @use "../components/btn";
 
 .popular {
   text-align: center;
+  margin-top: variables.$l;
 
+  h3 {
+    font-family: typography.$satisfy;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 400;
+    color: variables.$green;
+  }
+  h2{
+      color: variables.$black;
+      font-size: clamp(1.2rem, 3vw, 2.4rem);
+      font-family: typography.$poppins;
+      font-weight: 600;
+      padding-bottom: variables.$xsm;
+  }
   &__container {
+    width: 90vw;
+    margin: 0 auto;
     display: grid;
     place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     gap: variables.$sm;
 
     &--item {
@@ -17,7 +35,20 @@
       background: variables.$light-bg;
       padding: variables.$sm;
       border-radius: 0.5rem;
+      position: relative;
 
+      .fa-heart{
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        font-size: variables.$l;
+        transition: variables.$transition;
+        color: #333;
+        &:hover{
+          color: variables.$green;
+          cursor: pointer;
+        }
+      }
       img {
         display: block;
         max-width: 70%;
@@ -30,12 +61,24 @@
         color: variables.$black;
         text-transform: capitalize;
       }
-      i {
+      &--rate {
         color: gold;
       }
       &--total {
         color: variables.$light-color;
         font-family: typography.$nunito;
+      }
+      &--priceNew{
+        font-family: typography.$nunito;
+        color: variables.$black;
+        font-size: variables.$sm;
+        padding-right: variables.$xxsm;
+      }
+      &--priceOld{
+        font-family: typography.$nunito;
+        font-size: variables.$xsm;
+        color: variables.$light-color;
+        text-decoration: line-through;
       }
     }
   }

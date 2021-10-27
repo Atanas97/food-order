@@ -42,6 +42,10 @@
     font-size: variables.$xsm;
 
     @include mixins.hoverForGreen();
+
+    .fa-bars{
+      font-size: variables.$sm;
+    }
   }
 
   &__nav-menu {

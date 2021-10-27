@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: variables.$xsm;
-  width: 95vw;
+  width: 90vw;
   margin: variables.$xl auto;
   &__item {
     display: grid;
@@ -14,7 +14,7 @@
     color: variables.$black;
     background-color: variables.$light-bg;
     border-radius: 0.5rem;
-    padding: variables.$sm;
+    padding: 2.15rem 1rem;
     @include mixins.hoverForGreen();
     img {
       display: block;

@@ -7,7 +7,7 @@
   flex-direction: column;
   position: relative;
   &__img {
-    margin-top: 2rem;
+    margin-top: 5rem;
 
     &--background {
       display: block;
@@ -16,21 +16,21 @@
     }
     &--position {
       position: absolute;
-      top: 0%;
+      top: 8%;
       right: 0;
       width: 120%;
     }
   }
 
   &__info {
-    width: 95vw;
+    width: 90vw;
     margin: variables.$sm auto;
 
     h3 {
       color: variables.$green;
       font-family: typography.$poppins;
       font-weight: 400;
-      font-size: variables.$xsm;
+      font-size: variables.$sm;
     }
     h2 {
       color: variables.$black;
@@ -51,7 +51,22 @@
     }
   }
 }
+
+// @media screen and (min-width: 35rem){
+// .showcase__info {
+// margin-top: 8rem;
+// }
+// .showcase__img--position {
+// top: 15% !important;
+// right: -2% !important;
+// }
+// .showcase__img--background {
+// width: 100%;
+// }
+// }
+
 @media screen and (min-width: 45rem) {
+  .showcase-sect{padding-top:5rem;}
   .showcase {
     flex-direction: row-reverse;
     align-items: center;
@@ -59,10 +74,13 @@
     &__img {
       width: 100%;
 
+      &--background{
+        width: 70%;
+      }
       &--position {
-        width: 90%;
-        top: -25%;
-        right: -10%;
+        width: 60%;
+        top: -10%;
+        right: 0%;
       }
     }
 

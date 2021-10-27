@@ -1,0 +1,110 @@
+@use "../utilities/typography";
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.banner {
+    background: url(../image/row-banner.png) no-repeat;
+    height: 30rem;
+    // background-size: cover;
+    background-position: center;
+    background-size: cover;
+    width: 90vw;
+    margin: 3rem auto auto;
+    border-radius: .5rem;
+    position: relative;
+    &__info {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+
+        h3{
+            font-family: typography.$satisfy;
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            color: variables.$black;
+        }
+        h2{
+            font-family: typography.$poppins;
+            font-size: clamp(2.5rem, 3vw, 3rem);
+            text-transform: uppercase;
+            letter-spacing: variables.$xxsm;
+            color: red;
+        }
+        p{
+            font-family: typography.$nunito;
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            color: variables.$black;
+            padding-bottom: variables.$xsm;
+        }
+    }
+
+    &__ads{
+        display: grid;
+        gap: variables.$l;
+        @include mixins.gridColumns(18rem);
+        width: 90vw;
+        margin: 0 auto;
+        img{
+            display: block;
+            width: 100%;
+            margin-inline: auto;
+            object-fit: cover;
+        }
+
+        &--item {
+            position: relative;
+            border-radius: 1rem;
+
+            &--content {
+            position: absolute;
+            z-index: 111;
+            top: 5%;
+            left: 10%;
+                h2,h3{
+                    font-family: typography.$poppins;
+                    margin-bottom: variables.$xxsm;
+                }
+            }
+            
+        }
+
+        
+    }
+}
+.first{
+    color: #fff;
+}
+.second{
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.third{
+    h3{
+        color: variables.$light-color;
+        font-weight: 400;
+    }
+    h2{color:white;}
+}
+
+@media screen and (min-width: 45rem){
+    .banner__ads{
+        width: 90vw;
+        margin: variables.$l auto;
+
+        &--item{
+            overflow: hidden;
+
+            &:hover img{
+                transform: scale(1.2);
+                transition: variables.$transition;
+                overflow: hidden;
+                border-radius: 1rem;
+            }
+        }
+        img{
+            width: 100%;
+
+            
+        }
+    }
+}
