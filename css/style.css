@@ -485,12 +485,11 @@ a {
   padding-bottom: 0.75rem;
 }
 .popular__container {
-  width: 90vw;
+  width: 95vw;
   margin: 0 auto;
   display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: 1.15rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.5rem;
 }
 .popular__container--item {
   display: grid;
@@ -544,6 +543,13 @@ a {
   text-decoration: line-through;
 }
 
+@media screen and (min-width: 45rem) {
+  .popular__container {
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.15rem;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -567,9 +573,9 @@ a {
 
 .banner {
   background: url(../image/row-banner.png) no-repeat;
-  height: 30rem;
-  background-position: center;
+  height: 23rem;
   background-size: cover;
+  background-position: center;
   width: 90vw;
   margin: 3rem auto auto;
   border-radius: 0.5rem;
@@ -603,7 +609,7 @@ a {
   gap: 1.653rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   width: 90vw;
-  margin: 0 auto;
+  margin: 1.653rem auto auto;
 }
 .banner__ads img {
   display: block;

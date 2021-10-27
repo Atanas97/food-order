@@ -21,12 +21,12 @@
       padding-bottom: variables.$xsm;
   }
   &__container {
-    width: 90vw;
+    width: 95vw;
     margin: 0 auto;
+    // place-items: center;
     display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: variables.$sm;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: .5rem;
 
     &--item {
       display: grid;
@@ -81,5 +81,12 @@
         text-decoration: line-through;
       }
     }
+  }
+}
+@media screen and (min-width: 45rem) {
+  .popular__container {
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: variables.$sm;
   }
 }

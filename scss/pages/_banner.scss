@@ -4,10 +4,9 @@
 
 .banner {
     background: url(../image/row-banner.png) no-repeat;
-    height: 30rem;
-    // background-size: cover;
-    background-position: center;
+    height: 23rem;
     background-size: cover;
+    background-position: center;
     width: 90vw;
     margin: 3rem auto auto;
     border-radius: .5rem;
@@ -42,7 +41,7 @@
         gap: variables.$l;
         @include mixins.gridColumns(18rem);
         width: 90vw;
-        margin: 0 auto;
+        margin: variables.$l auto auto;
         img{
             display: block;
             width: 100%;
